@@ -5,17 +5,15 @@ let serch = document.querySelector('#serch')
 
 serch.addEventListener("keypress", (event) => {
   fatherElement.innerHTML = '';
-  let searching = characters.filter(({name}) => name === event.target.value);
+  let searching = characters.filter(({name}) => name.toLocaleLowerCase().includes(event.target.value.toLocaleLowerCase()));
+  // return name.toLocaleLowerCase().includes(event.target.value.toLocaleLowerCase())
   printCharacters(searching)
 })
-)
-
-
 
 fetch(`https://swapi.dev/api/people`)
   .then(response => response.json())
   .then(data => characters = data.results)
- .then(()=>printCharacters())
+ .then(()=>printCharacters(characters))
 
 
 let printCharacters= (characters) => {
