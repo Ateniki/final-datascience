@@ -1,0 +1,63 @@
+body {
+  background-color: rgb(3, 1, 29);
+  height: 100%;;
+}
+
+.name-card {
+  width: 100%;
+  height: 30%;
+  padding-left: 25px;
+  padding-top: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+ }
+
+
+
+#infoCard{
+  width: 14rem;
+  height: 19rem;
+  padding-top: 8px;
+  border-radius: 8px;
+  background-image: url("./img/sw2.jpg");
+  background-size: 100%;
+  color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+
+}
+
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #8c55ac7a;
+    border-radius: 8px;
+    
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text-container {
+    flex-direction: column;
+  }
+  .text {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    padding-left: 4rem;
+    padding-top: .5rem;
+  }
+
