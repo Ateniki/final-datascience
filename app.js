@@ -1,6 +1,16 @@
 let characters = []
 
 let fatherElement = document.querySelector("#container-row")
+let serch = document.querySelector('#serch')
+
+serch.addEventListener("keypress", (event) => {
+  fatherElement.innerHTML = '';
+  let searching = characters.filter(({name}) => name === event.target.value);
+  printCharacters(searching)
+})
+)
+
+
 
 fetch(`https://swapi.dev/api/people`)
   .then(response => response.json())
@@ -8,7 +18,7 @@ fetch(`https://swapi.dev/api/people`)
  .then(()=>printCharacters())
 
 
-let printCharacters= () => {
+let printCharacters= (characters) => {
    characters.forEach((element) => { 
     // console.log(element)
    //  infoCard.innerHTML =`<div>${element.name}</div>`
