@@ -18,6 +18,8 @@ body {
 #infoCard{
   width: 14rem;
   height: 19rem;
+  margin-right: 3.4rem;
+  margin-bottom: 2rem;
   padding-top: 8px;
   border-radius: 8px;
   background-image: url("./img/sw2.jpg");
@@ -25,7 +27,7 @@ body {
   color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
-
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
 
@@ -57,7 +59,10 @@ body {
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 22px;
-    padding-left: 4rem;
-    padding-top: .5rem;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    padding-top: .2rem;
   }
+
+
 

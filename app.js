@@ -5,7 +5,7 @@ let fatherElement = document.querySelector("#container-row")
 fetch(`https://swapi.dev/api/people`)
   .then(response => response.json())
   .then(data => characters = data.results)
- //.then(()=>printCharacters())
+ .then(()=>printCharacters())
 
 
 let printCharacters= () => {
@@ -20,6 +20,13 @@ let printCharacters= () => {
    let imgElement = document.createElement('img')
    let overlayElement = document.createElement('div')
    let textElement = document.createElement('div')
+   let textListElement = document.createElement('div')
+   let textGenderElement = document.createElement('div')
+   let textHeightElement = document.createElement('div')
+   let textMassElement = document.createElement('div')
+   let textHairElement = document.createElement('div')
+   let textSkinElement = document.createElement('div')
+   let textBirthElement = document.createElement('div')
 
    infoCardElement.setAttribute('id', 'infoCard') 
    infoCardElement.classList.add('card'); 
@@ -27,13 +34,44 @@ let printCharacters= () => {
    imgElement.src = './img/sw2.jpg'
    overlayElement.classList.add('overlay')
    textElement.setAttribute('id' , 'infotext')
-   textElement.classList.add('text' , 'col-10')
+   textElement.classList.add('name-card')
    textElement.innerHTML = element.name 
+   textListElement.classList.add('text-container')
+   textGenderElement.setAttribute('id' , 'text-gender')
+   textGenderElement.classList.add('text')
+   textGenderElement.innerHTML = 'Gender: ' + element.gender
+   textHeightElement.setAttribute('id' , 'text-height')
+   textHeightElement.classList.add('text')
+   textHeightElement.innerHTML = 'Height: ' + element.height
+   textMassElement.setAttribute('id' , 'text-mass')
+   textMassElement.classList.add('text')
+   textMassElement.innerHTML = 'Mass: ' + element.mass
+   textHairElement.setAttribute('id' , 'text-hair')
+   textHairElement.classList.add('text')
+   textHairElement.innerHTML = 'Hair: ' + element.hair_color
+   textSkinElement.setAttribute('id' , 'text-skin')
+   textSkinElement.classList.add('text')
+   textSkinElement.innerHTML = 'Skink: ' + element.skin_color
+   textBirthElement.setAttribute('id' , 'text-birth')
+   textBirthElement.classList.add('text')
+   textBirthElement.innerHTML = 'Birth year: ' + element.birth_year 
+
 
    fatherElement.appendChild(infoCardElement)
    infoCardElement.appendChild(imgElement)
    infoCardElement.appendChild(overlayElement)
    overlayElement.appendChild(textElement)
+   overlayElement.appendChild(textListElement)
+   textListElement.appendChild(textGenderElement)
+   textListElement.appendChild(textHeightElement)
+   textListElement.appendChild(textMassElement)
+   textListElement.appendChild(textHairElement)
+   textListElement.appendChild(textSkinElement)
+   textListElement.appendChild(textBirthElement)
+
+
+
+
 
      })
   // console.log(characters)
