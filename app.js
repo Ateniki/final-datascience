@@ -3,12 +3,13 @@ let characters = []
 let fatherElement = document.querySelector("#container-row")
 let serch = document.querySelector('#serch')
 
-serch.addEventListener("keypress", (event) => {
+serch.addEventListener("keyup", (event) => {
   fatherElement.innerHTML = '';
   if(event.target.value.toLocaleLowerCase() === "" ){
     printCharacters(characters)
   } else {
-    let searching = characters.filter(({name}) => name.toLocaleLowerCase().includes(event.target.value.toLocaleLowerCase()));
+    let searching = characters.filter(({name}) => 
+    name.toLocaleLowerCase().includes(event.target.value.toLocaleLowerCase()));
     printCharacters(searching)
   }
 })
